@@ -9,6 +9,8 @@
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{etoolbox}
 
 \begin{document}
 
@@ -23,6 +25,9 @@
 \maketitle
 
 \tableofcontents
+
+\listoftables
+\listoffigures
 
 % abstract begin
 \begin{sazetak}
@@ -42,21 +47,19 @@ Abstract na engleskom jeziku.
 
 % abstract end
 
-
-
 \chapter{Uvod}
 
 \section{Legalizacija - bezpovratne promjene na IT tržištu BiH}
 
 Akcije državnih inspekcijskih organa na suzbijanju nelegalnog softvera (nadalje legalizacija) sa početkom 2012 godine označila je početak krupnih promjena na tržištu informatičkih \engl{information technology, nadalje IT} rješenja u Bosni i Hercegovini. 
 Većina poslovnih subjekata koja se u proteklim godinama opremila "jeftinim" nelegalnim softverom \engl{software} našla se u nezavidnoj situaciji.
-Izloženi visokim troškovima legalizacije svuda zastupljenog "Microsoft Windows" software-a, pojavila se potražnja za legalnim softverom drugih proizvođača.  
+Usljed visokih troškovima legalizacije "Microsoft" softvera\footnote{familija "Microsoft Windows" OS-ova, uz svuda prisutni ali i redovno nelegalno instalirani "Microsoft Office" uredski paket}, pojavila se potražnja za softverom drugih proizvođača.  
 
-\section{OSS informatička rješenja}
+\section{OSS software}
 
 Preduzeće "bring.out"\footnote{\url{http://www.bring.out.ba/}} je dugi niz godina orjentisano na ponudu sistema baziranih na software-u otvorenog koda \engl{open source software, nadalje OSS}.
 
-Linux/Ubuntu serverska rješenja \footnote{\url{http://linux.com}, \url{http://ubuntu.com}}) su i prije legalizacije imali svoje tržište. Međutim, nakon legalizacije pojavila se potražnja za cjelovitim informatičkim IT rješenjima baziranim na OSS-u:
+Potražnja za Linux/Ubuntu serverskim rješenjima \footnote{\url{http://linux.com}, \url{http://ubuntu.com}}) je postojala i prije legalizacije. Međutim, tek nakon legalizacije pojavila se potražnja za cjelovitim informatičkim IT rješenjima baziranim na OSS-u:
 \begin{itemize}
   \item server operativni sistem (nadalje OS)
   \item desktop operativni sistem
@@ -67,7 +70,31 @@ Linux/Ubuntu serverska rješenja \footnote{\url{http://linux.com}, \url{http://u
   \end{itemize}
 \end{itemize}
 
-Ovaj projekat će prezentovati instalaciju i troškove eksploatacije jednog takvog sistema.
+\subsection{Ubuntu Linux}
+"Ubuntu" Linux distribucija radi svoje jednostavnosti i kvaliteta postao popularan desktop OS.
+
+Za razliku od "Windows" operativnih sistema, "Ubuntu" desktop sistem sadrži kompletan set aplikacija za svakodnevne potrebe:
+\begin{itemize}
+  \item LibreOffice uredski paket za pravljenje tekstualnih i tabelarnih dokumenata, prezentacija i crteža\footnote{Pandam "Microsoft office" setu aplikacija. Otvara većinu "Microsoft office" dokumenata }
+  \item "Inkscape" za vektorsku grafiku
+  \item "GIMP" za bitmapiranu graviku
+  \item "Evince" preglednik PDF dokumenata
+  \item "Firefox", "Chromium" internet pretraživači
+\end{itemize}  
+ 
+Ovim se lista dostupnih aplikacija ne završava. Međutim, i to je dovoljno u poređenju sa "Windows" OS-om koji se isporučuje bez ikakvih aplikacija.
+
+Unutar ovog projekta će se OSS koristiti za gradnju jednog kompletnog informacionog sistema.
+
+\subection{F18 knowhowERP software}
+Pored standardnih komponentni "Ubuntu" OS-a, za ERP softver će se koristiti "F18" knowhowERP software.
+
+F18\footnote{\url{http://redmine.bring.out.ba/projects/f18}} je multiplatformski OSS softver, proizvod firme "bring.out".  
+
+\subsection{Cjelovito OSS IT rješenje}
+Na osnovu do sada rečenog, bosanskom klijentu je moguće ponuditi cjelovito OSS IT rješenje.  
+
+Ovaj projekat će obuhvatiti instalaciju jednog takvog sistema kod klijenta.
 
 Komparativnom analizom utvrdićemo toškove sličnog sistema baziranog na zatvorenim tehnologijama:
 \begin{enumerate}[(a)]
@@ -75,29 +102,64 @@ Komparativnom analizom utvrdićemo toškove sličnog sistema baziranog na zatvor
   \item sa kompletnom zamjenom kako sistemskog, tako i aplikativnog ERP softvera.  
 \end{enumerate}
 
-Korisnik je mala kompanija koja se bavi trgovinom. Sa stanovišta IT radnih mjesta kompanija se sastoji od:
+\section{Profil korisnika projekta}
+Korisnik je mala kompanija koja se bavi trgovinom. Sa stanovišta IT-a kompanija se sastoji od:
 \begin{itemize}
   \item maloprodajna mreža od 5 prodavnica
   \item centrala kompanije sa knjigovodstvom, 4 radne stanice
   \item 1 server baze podataka 
 \end{itemize}
 
+\chapter{Analiza}
 
-\section{Test}
+\section{Analiza problema}
 
-Test
+Povod klijentu za traženje novog rješenja je nedavna akcija legalizacije. 
 
-Nabrajalica
+Međutim, analiza je pokazala da su glavni problemi leže u činjenici da postojeći poslovni IS ne obezbjeđuje sve potrebne podatke. Već nakon prvog sastanka sa klijentom utvrđeni su sljedeći problemi, prikazani piramidmo problema:
 
-\begin{enumerate}
-  \item item 1
-  \item item 2
-\end{enumerate}
+\begin{figure}[H]
+\centering
+\includegraphics[width=12cm]{img/piramida_problema.png}
+\caption{Piramida problema}
+%\caption{bla bla (\cite{web:eric})}
+\end{figure}
 
-bla bla \footnote{fus nota}.
+Piramida na vrhu prikazuje opće probleme da bi se idući ka dnu ti problemi konkretizirali.  
 
-\subsection{Podnaslov neki}
+\section{Analiza cilja}
+Analizom problema prezentovanih piramidom problema brzo dolazimo do strateškog cilja ovog projekta:
+%\patchcmd{\quote}{\rightmargin}{\leftmargin 6em \rightmargin}{}{}
+\begin{quote}
+\em Uvođenjem novog IS-a poboljšati pravovremenost i kvalitet tekućih informacija o poslovanju.} 
+\end{quote}
+Analogno ranijem grafičkom prikazu problema, putem piramide ciljeva od dna ka vrhu prezentujemo ciljeve čijom realizacijom postižemo strateški cilj:
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=12cm]{img/piramida_cilja.png}
+\caption{Piramida cilja}
+\end{figure}
+
+\section{Logički okvir projekta}
+Na kraju analize dolazimo do ključnih odrednica projekta:
+\begin{table}[h]
+%\centering
+\resizebox{15cm}{!} {
+\begin{tabular}{ | r | l | }
+\hline
+Svrha projekta: & Unapređenje poslovanja kompanije obezbjeđenjem kvalitetnijih informacija o poslovanju \\ \hline
+Cilj: & Uvođenje novog informacionog sistema \\ \hline
+Ulazi projekta: & Postojeći informacioni sistem, postojeća organizacija poslovanja \\ \hline
+Izlazi projekta: & Unapređeni informacioni sistem, unapređena organizacija poslovanja \\ \hline
+\end{tabular}
+}
+
+\caption{Logički okvir projekta}
+\end{table}
+
+
+\label{tab:myfirsttable}
 \label{labela_oznaka}
 
 \begin{description}
@@ -113,22 +175,8 @@ Citacija \cite[str.~391]{pentaho32}.
    \item nako
 \end{itemize}
 
-\begin{enumerate}
-  \item \emph{Extract:}  uzimanje podataka iz vanjskih izvora
-  \item \emph{Transform:} transformacija operativnih podataka u format koji je pogodan za pohranu u skladište podataka (vidi \ref{labela_oznaka})
-  \item \emph{Load:} snimanje `prečišćenih' podataka u skladište podataka (DW/DMart)
-\end{enumerate}
- 
-
 Referenca na sekciju sekcija1 (vidi \ref{sect:sekcija1}).
-
  
-\begin{figure}[H]
-\centering
-\includegraphics[width=12cm]{img/hap_klap.png}
-\caption{bla bla (\cite{web:eric})}
-\end{figure}
-
 \section{Sekcija 1 sa slikom}
 \label{sect:sekcija1}
 
@@ -159,10 +207,9 @@ Softver korišten za realizaciju ovog dokumenta:
   \item MacTex - pdfTeX 3.1415926-2.3-1.40.12 (TeX Live 2011)
   \item Windows XP Proffesional on VirtualBox 4.1.16 MacOSX 
   \item Microsoft Project 2010, trial, ProductID 02252-552-2789414-37542
+  \item LibreOffice 3.5.4 ?
+  \item Inkscape ?
 \end{enumerate}
-
-
-
 
 \begin{itemize}
 
