@@ -1,0 +1,122 @@
+\documentclass[times, utf8, seminar]{fit}
+
+%\batchmode
+%\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\begin{document}
+
+\title{Projekat: Unapređenje poslovnog informacionog sistema na primjeru jedne kompanije}
+
+\author{Ernad Husremović}
+\brindex{DL 2792}
+\verzija {1.0.0}
+
+\mentor{prof.dr Murat Prašo}
+
+\maketitle
+
+\tableofcontents
+
+% abstract begin
+\begin{sazetak}
+
+Sažetak na bosanskom jeziku.
+
+\kljucnerijeci{bosanska rijec 1, bosanska rijec 2}
+\end{sazetak}
+
+\engtitle{Naslov na engleskom jeziku}
+\begin{abstract}
+Abstract na engleskom jeziku.
+
+\keywords{key1, key2, key3}
+\end{abstract}
+
+% abstract end
+
+
+
+\chapter{Uvod}
+
+\section{Test}
+
+Test
+
+Nabrajalica
+
+\begin{enumerate}
+  \item item 1
+  \item item 2
+\end{enumerate}
+
+bla bla \footnote{fus nota}.
+
+\subsection{Podnaslov neki}
+
+\label{labela_oznaka}
+
+\begin{description}
+  \item [item 1]  objasni item 1
+  \item [item 2] objasni item 2
+\end{description}
+ 
+
+Citacija \cite[str.~391]{pentaho32}.
+
+\begin{itemize}
+   \item vako 
+   \item nako
+\end{itemize}
+
+\begin{enumerate}
+  \item \emph{Extract:}  uzimanje podataka iz vanjskih izvora
+  \item \emph{Transform:} transformacija operativnih podataka u format koji je pogodan za pohranu u skladište podataka (vidi \ref{labela_oznaka})
+  \item \emph{Load:} snimanje `prečišćenih' podataka u skladište podataka (DW/DMart)
+\end{enumerate}
+ 
+
+Referenca na sekciju sekcija1 (vidi \ref{sect:sekcija1}).
+
+\url{http://www.bring.out.ba/}
+ 
+\begin{figure}[H]
+\centering
+\includegraphics[width=12cm]{img/pentaho_arhitektura_eric.png}
+\caption{bla bla (\cite{web:eric})}
+\end{figure}
+
+\section{Sekcija 1 sa slikom}
+\label{sect:sekcija1}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{img/vako_nako.pdf}
+\caption{vako nako caption}
+\end{figure}
+
+
+\section{Zaključak}
+
+\bibliography{literatura}
+\bibliographystyle{fit}
+
+\appendix
+
+\chapter{dodatak 1}
+\label{chap:dodatak1}
+
+\chapter{Bilješke}
+\label{chap:biljeske}
+
+\begin{enumerate}
+  \item jedan
+  \item dva: \url{http://redmine.bring.out.ba/issues/26711}
+\end{enumerate}
+
+\end{document}
