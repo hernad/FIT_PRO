@@ -55,9 +55,9 @@ Akcije državnih inspekcijskih organa na suzbijanju nelegalnog softvera (nadalje
 Većina poslovnih subjekata koja se u proteklim godinama opremila "jeftinim" nelegalnim softverom \engl{software} našla se u nezavidnoj situaciji.
 Usljed visokih troškovima legalizacije "Microsoft" softvera\footnote{familija "Microsoft Windows" OS-ova, uz svuda prisutni ali i redovno nelegalno instalirani "Microsoft Office" uredski paket}, pojavila se potražnja za softverom drugih proizvođača.  
 
-\section{OSS software}
+\section{OSS softver}
 
-Preduzeće "bring.out"\footnote{\url{http://www.bring.out.ba/}} je dugi niz godina orjentisano na ponudu sistema baziranih na software-u otvorenog koda \engl{open source software, nadalje OSS}.
+Preduzeće "bring.out"\footnote{\url{http://www.bring.out.ba/}} je dugi niz godina orjentisano na ponudu sistema baziranih na softveru otvorenog koda \engl{open source software, nadalje OSS}.
 
 Potražnja za Linux/Ubuntu serverskim rješenjima \footnote{\url{http://linux.com}, \url{http://ubuntu.com}}) je postojala i prije legalizacije. Međutim, tek nakon legalizacije pojavila se potražnja za cjelovitim informatičkim IT rješenjima baziranim na OSS-u:
 \begin{itemize}
@@ -65,8 +65,8 @@ Potražnja za Linux/Ubuntu serverskim rješenjima \footnote{\url{http://linux.co
   \item desktop operativni sistem
   \item aplikativni softver
   \begin{itemize}
-    \item opći software za uredske potrebe
-    \item poslovni - softver \engl{Enterprise Resource Planning, nadalje ERP}
+    \item opći softver za uredske potrebe
+    \item poslovni softver za podršku tekućim operacijama kompanije \engl{Enterprise Resource Planning, nadalje ERP}
   \end{itemize}
 \end{itemize}
 
@@ -106,7 +106,7 @@ Svijetli primjeri država u regionu kojima postoje jake zajednice FOSS \engl{Fre
 
 Na žalost, Bosna i Hercegovina, kao i u većini stvari, na tom planu zaostaje. 
 
-\subsection{"F18 knowhowERP" software}
+\subsection{"F18 knowhowERP" softver}
 Pored standardnih komponentni "Ubuntu" OS-a, za ERP softver će se koristiti "F18" knowhowERP software.
 
 "F18" knowhowERP\footnote{\url{http://redmine.bring.out.ba/projects/f18}} je multiplatformsko "open source" ERP rješenje, proizvod firme "bring.out".  
@@ -119,12 +119,6 @@ Predhodnik "F18" je programsko rješenje "FMK" koje se na lokalnom tržištu kor
 Na osnovu svega što je do sada izloženo, bosanskom klijentu je moguće ponuditi cjelovito OSS IT rješenje.  
 
 Ovaj projekat će obuhvatiti instalaciju jednog takvog sistema kod klijenta.
-
-Komparativnom analizom utvrdićemo toškove sličnog sistema baziranog na zatvorenim tehnologijama:
-\begin{enumerate}[(a)]
-  \item sa uključenim troškovima legalizacije postojećeg nelegalnog "Windows" OS softvera bez zamjene postojećeg ERP aplikativnog softvera
-  \item sa kompletnom zamjenom kako sistemskog, tako i aplikativnog ERP softvera.  
-\end{enumerate}
 
 \section{Profil korisnika projekta}
 Korisnik je mala kompanija koja se bavi trgovinom. Sa stanovišta IT-a kompanija se sastoji od:
@@ -189,15 +183,53 @@ Kvalitetno upravljanje projektom zahtjeva cjelovid uvid u projekat.
 
 Upravljanje podrazumjeva uvid i praćenje svih bitnih aspekata projekta:
 \begin{itemize}
-  \item tehnički
-  \item vremenski
+  \item tehničkih
+  \item vremenskih
   \item angažovanje ljudskih i materijalnih resursa
-  \item finansijski
+  \item finansijskih
 \end{itemize}
 
-\section{Tehnički aspekt}
+\pagebreak
+\section{Tehnički aspekti}
 
-Pregled 
+U uvodnom dijelu su prezentovane tehnologije koje će se koristiti za izgradnji IS-a. Zato taj dio nećemo ponavljati ovdje.
+
+Uspješno upravljanje projektom traži identifikaciju i kvantifikaciju rizika, te planiranje odgovora na pojedinačne rizike.
+
+\subsection{Glavni rizici projekta}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{ |p{1.5cm}|p{4cm}|p{7.5cm}|p{1.5cm}| }
+\hline
+Oznaka & Rizik & Opis & Prioritet  \\ \hline\hline
+R1 & Promjena navika kod korisnika & Novi IS pretpostavlja radikalno zamjenu softvera: od desktopa do ERP rješenja & Visok \\ \hline
+R2 & bring.out je jedini OSS IT vendor na bosanskom tržištu & Iako su tehnologije koje se implementiraju otvorene, na BH tržištu ne postoje drugi vendori koji nude slična rješenja & Visok \\ \hline
+R3 & Nemar države za non-Windows sisteme & Državne institucije podrazumjevaju da porezni obveznici posjeduju Windows OS & Visok \\ \hline
+R4 & Ponuđeno ERP rješenje neće zadovoljiti potrebe klijenta & Opasnost da će klijent F18 knowhow ERP percipirati kao neadekvatno ERP rješenje & Srednji \\ \hline
+R5 & Neredovno finansiranje projekta & Klijent neće moći obezbjediti redovno finansiranje projekta iz tekućih izvora & Srednji \\ \hline
+\end{tabular}
+\caption{Lista rizika}
+\end{table}
+
+\subsection{Strategija odgovora na pojedinačne rizike} 
+
+U sljedećoj tabeli dajemo prikaz preventivnih i akcija kontrole za identificirane rizike:
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|p{1.7cm}|p{13.2cm}|}
+\hline
+Oznaka & Preventivne i kontrolne akcije  \\ \hline\hline
+R1 & Veću pažnju posvetiti obuci korisnika \\ \hline
+R2 & Otvorenim pristupom klijentu pokazati da odnose sa klijentom ne gradi na bazi monopola, nego upravo suprotnoe. Stalna komunikacija sa klijentom je najbolji način da se otkloni bojazan klijetna po ovom pitanju\\ \hline
+R3 & Aktivnim djelovanjem prema državnim institucijama obezbjediti "bring.out" treba obezbjediti da njegovi klijenti ne budu korisnici drugog reda zato što ne koriste "Windows OS"\\ \hline 
+R4 & Softver je alat. Koliko god on dobar bio, on sam neće uraditi posao. IT vendor se treba aktivno uključiti u probleme i potrebe korisnika, pomoći mu da organizuje poslovanje u skladu sa potrebama i glavnim ciljevima IS-a.\\ \hline
+R5 & U slučaju objektivnih problema, dogovorom prilagoditi dinamiku plaćanja. S obzirom da se u cjelini radi o sopstvenim proizvodima, IT vendor ima mogućnost učiniti ovakve ustupke klijentu. \\ \hline
+\end{tabular}
+\caption{Kontrola rizika}
+\end{table}
+
 \pagebreak
 \section{Vremenski aspekt}
 
@@ -209,11 +241,11 @@ Napravljeni dinamički plan je ispoštovao okvire tog dogovora:
 \centering
 \includegraphics[width=15.5cm]{img/dinamika_sheet.png}
 \caption{Tabelarni pregled projektnih zadataka}
-\end{figure}
+\end{table}
 
 Kao nastavak tabelarnom pregledu slijedi gantogram:
 
-\begin{table}[!h]
+\begin{figure}[!h]
 \centering
 \includegraphics[width=15.5cm]{img/dinamika_gant.png}
 \caption{Gantogram projekta}
@@ -229,9 +261,9 @@ Pregled materijalnih resursa:
 \centering
 \includegraphics[width=15cm]{img/materijalni_resursi.png}
 \caption{Pregled materijalnih resursa}
-\end{figure}
+\end{table}
 
-Treba naglasiti da se u slučaju "open source" sofvera ne radi o "klasičnim" materijanim resursima. Kod OSS-a prodaja licenci za korištenje kao troškovna stavka ne postoji. Klijent plaća instalaciju i podešenje sistema davaocu IT usluga \engl{IT vendor}.
+Treba naglasiti da se u slučaju "open source" sofvera ne radi o "klasičnim" materijanim resursima. Kod OSS-a prodaja licenci za korištenje kao troškovna stavka ne postoji. Klijent plaća instalaciju i podešenje sistema davaocu IT usluga \engl{IT vendor, IT provider}.
 
 S obzirom da su cijene tih usluga normirane, te usluge je najpogodnije u projektu izraziti kao materijalne resurse.
 
@@ -252,11 +284,11 @@ Pregled ljudskih resursa (projektni tim) potrebnih za realizaciju projekta:
 \centering
 \includegraphics[width=15.5cm]{img/ljudski_resursi.png}
 \caption{Pregled ljudskih resursa}
-\end{figure}
+\end{table}
 
 Raspored tima tokom realizacije projekta:
 
-\begin{table}[!h]
+\begin{figure}[!h]
 \centering
 \includegraphics[width=15.5cm]{img/team_planner.png}
 \caption{Pregled alokacije ljudskih resursa}
@@ -271,7 +303,7 @@ Radi planiranja sastanaka uvršten je predstavnik klijenta. Zbog pravilne kalkul
 \centering
 \includegraphics[height=7cm]{img/troskovi.png}
 \caption{Pregled ukupnih troškova angažovanja resursa}
-\end{figure}
+\end{table}
 
 Ukupni troškovi realizacije projekta, uključujući fazu stabilizacije su \textbf{6204,40 KM}.
 
@@ -279,9 +311,10 @@ Navedeni su iznosi neto, bez uračnotog PDV-a.
 
 \subsection{Finansiranje projekta}
 
-Davalac usluga i klijent su dogovorili sjedeću dinamiku plaćanja:
+Prodavac i klijent su dogovorili sjedeću dinamiku plaćanja:
 
 \begin{table}[h]
+\centering
 \resizebox{15cm}{!} {
 \begin{tabular}{ | r | c | c | r | }
 \hline
@@ -299,6 +332,19 @@ stabilizacija 2 & aktivna podrška klijentu & 31.08.2012 & 1204.40 \\ \hline\hli
 Ova dinamika omogućava klijentu da iz sopstvenih izvora (tekućih prihoda) finansira projekat.
 
 \subsection{Ocjena opravdanosti investicije}
+
+Analizu opravdanosti investicije baziraćemo na bazi alternativnog rješenja u kome korisnik jedino plaća troškove legalizacije postojećeg sistemskog sofvera.
+Znači nećemo u kalkulaciju staviti troškove legalizacije uredskog "Microsoft office" softvera, niti nabavku novog ERP rješenja.
+
+Kada bi se te stavke uvrstile u kalkulaciju opravdanosti, interna stopa rentabilnosti bi bila puno veća.
+
+Međutim, čak i u ovom "minimalističkom" scenariju, naš projekat ima visoku internu stopu rentabilnosti od \textbf{36,9\%}, što nam sljedeća kalkulacija pokazuje:
+
+\begin{table}[!h]
+\centering
+\includegraphics[height=10cm]{img/kalk_opravdanost.png}
+\caption{Kalkulacija opravdanosti investicije}
+\end{table}
 
 \chapter{Zaključak}
 
