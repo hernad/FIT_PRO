@@ -12,29 +12,6 @@
 \usepackage{graphicx}
 \usepackage{etoolbox}
 
-Ubuntu desktop priručnik
-https://help.ubuntu.com/12.04/ubuntu-help/index.html
-Ubuntu zajednica
-
-Ubuntu server priručnik
-https://help.ubuntu.com/12.04/serverguide/serverguide.pdf
-
-Ubuntu zajednica 
-
-Uvod u upravljanje projektom, Murat Prašo, Univerzitetska knjiga Mostar, 2005
-Poslovni reporting, Murat Prašo, Univerzitetska knjiga Mostar 2003
-
-Inkscape 0.48 Essentials for Web Designers: LITE
-
-Bethany Hiitola  Packt publishing
-
-
-The Cathedral & the Bazaar: Musings on Linux and Open Source by an Accidental Revolutionary 
-Eric S. Raymond, 1999
-
-http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/index.html
-
-
 \begin{document}
 
 \title{Projekat: Unapređenje informacionog sistema na primjeru jedne kompanije}
@@ -98,24 +75,48 @@ Potražnja za Linux/Ubuntu serverskim rješenjima \footnote{\url{http://linux.co
 
 Za razliku od "Windows" operativnih sistema, "Ubuntu" desktop sistem sadrži kompletan set aplikacija za svakodnevne potrebe:
 \begin{itemize}
-  \item LibreOffice uredski paket za pravljenje tekstualnih i tabelarnih dokumenata, prezentacija i crteža\footnote{Pandam "Microsoft office" setu aplikacija. Otvara većinu "Microsoft office" dokumenata }
-  \item "Inkscape" za vektorsku grafiku
-  \item "GIMP" za bitmapiranu graviku
-  \item "Evince" preglednik PDF dokumenata
+  \item LibreOffice uredski paket za pravljenje tekstualnih i tabelarnih dokumenata, prezentacija i crteža\footnote{U funkcionalnom smislu sličan "Microsoft office" setu aplikacija. Može obrađivati većinu "Microsoft office" dokumenata}
+  \item "Inkscape", program za vektorsku grafiku \cite{inkscape}
+  \item "GIMP", program za bitmapiranu grafiku
+  \item "Evince", preglednik PDF dokumenata
   \item "Firefox", "Chromium" internet pretraživači
+  \item "OpenProj", program za izradu i praćenje projekata\footnote{U funkcionalnom smislu sličan "Microsoft project" aplikaciji}
 \end{itemize}  
+
  
-Ovim se lista dostupnih aplikacija ne završava. Međutim, i to je dovoljno u poređenju sa "Windows" OS-om koji se isporučuje bez ikakvih aplikacija.
+\subsection{Razlike između otvorenog i zatvorenog softvera} 
 
-Unutar ovog projekta će se OSS koristiti za gradnju jednog kompletnog informacionog sistema.
+S obzirom da su za ovaj projekat najbitniji fokus poređenja će biti "Windows" i "Ubuntu" OS. 
 
-\subection{F18 knowhowERP software}
+Lista iz predhodne sekcije predstavlja djelimičnu listu dostupnih aplikacija. Međutim, i to je dovoljno da se uoči bitna razlika između "Windows" i "Ubuntu" OS-a. 
+
+Uz "Windows" se isporučuje samo operativni sistem, dok "Ubuntu" kao i ostale linux distribucije isporučuju kompletan sistem koji korisnik može odmah početi koristiti.
+
+U ranom stadiju razvoja OSS softver je manjkao sa kvalitetnom dokumentacijom. Sada to nije slučaj. 
+
+Razvoj "open source" softvera je suštinski drugačiji u odnosu na razvoj zatvorenog sofvera. Kod zatvorenog softvera sve ključne razvojne aktivnosti i sudbina softvera nalaze se u rukama jednog proizvođača.
+
+Kod OSS-a postoji velika uključenost zajednice korisnika \engl{community}, što omogućava da se sve komponente softvera razvijaju u skladu sa potrebama i zahtjevima zajednice. Korisnicima je na raspolaganju velika količina dokumentacije koja se takođe razvija na principima otvorenosti.
+
+Korisik ubuntu sistema na raspolaganju ima odličnu dokumentaciju za serverske \cite{ubuntudesktop} i desktop \cite{ubuntuserver}.
+
+Zahvaljujući otvorenosti, lokalizacija programa i korisničke dokumentacije (prevod i prilagodbe za lokalno tržipte) za OSS nije vođena samo komercijalnim motivima. U mnogim zemljama postoje jake zajednice korisnika koje lokalizaciju "open source" softvera vrše na bazi volonterizma. Kako se radi o projektima od velikog javnog značaja, te zajednice su često finansirane od strane države.
+
+Svijetli primjeri država u regionu kojima postoje jake zajednice FOSS \engl{Free and open source software} i OSS  korisnika su Makedonija i Slovenija.
+
+Na žalost, Bosna i Hercegovina, kao i u većini stvari, na tom planu zaostaje. 
+
+\subsection{F18 knowhowERP software}
 Pored standardnih komponentni "Ubuntu" OS-a, za ERP softver će se koristiti "F18" knowhowERP software.
 
-F18\footnote{\url{http://redmine.bring.out.ba/projects/f18}} je multiplatformski OSS softver, proizvod firme "bring.out".  
+"F18" knowhowERP\footnote{\url{http://redmine.bring.out.ba/projects/f18}} je multiplatformsko "open source" ERP rješenje, proizvod firme "bring.out".  
+
+Predhodnik "F18" je programsko rješenje "FMK" koje se na lokalnom tržištu koristi od 1994 godine.
+
+"F18" je softver pravljena od Bosanaca za BiH tržište. "F18" je u cjelosti domaći proizvod.
 
 \subsection{Cjelovito OSS IT rješenje}
-Na osnovu do sada rečenog, bosanskom klijentu je moguće ponuditi cjelovito OSS IT rješenje.  
+Na osnovu svega što je do sada izloženo, bosanskom klijentu je moguće ponuditi cjelovito OSS IT rješenje.  
 
 Ovaj projekat će obuhvatiti instalaciju jednog takvog sistema kod klijenta.
 
@@ -139,7 +140,7 @@ Korisnik je mala kompanija koja se bavi trgovinom. Sa stanovišta IT-a kompanija
 
 Povod klijentu za traženje novog rješenja je nedavna akcija legalizacije. 
 
-Međutim, analiza je pokazala da su glavni problemi leže u činjenici da postojeći poslovni IS ne obezbjeđuje sve potrebne podatke. Već nakon prvog sastanka sa klijentom utvrđeni su sljedeći problemi, prikazani piramidmo problema:
+Međutim, analiza je pokazala da su glavni problemi leže u činjenici da postojeći poslovni IS ne obezbjeđuje sve potrebne podatke. Već nakon prvog sastanka sa klijentom utvrđeni su sljedeći problemi, prikazani piramidom problema (\cite{prasopro}):
 
 \begin{figure}[H]
 \centering
@@ -200,15 +201,6 @@ Citacija \cite[str.~391]{pentaho32}.
 
 Referenca na sekciju sekcija1 (vidi \ref{sect:sekcija1}).
  
-\section{Sekcija 1 sa slikom}
-\label{sect:sekcija1}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=15cm]{img/vako_nako.pdf}
-\caption{vako nako caption}
-\end{figure}
-
 
 \section{Zaključak}
 
@@ -228,10 +220,10 @@ Softver korišten za realizaciju ovog dokumenta:
   \item Ubuntu Linux 12.04 Unity, 64bit
   \item mvim, vim tekst editor ver 7.3
   \item MacTex - pdfTeX 3.1415926-2.3-1.40.12 (TeX Live 2011)
-  \item Windows XP Proffesional on VirtualBox 4.1.16 MacOSX 
+  \item Windows XP Proffesional\footnote{kupac "bring.out" u sklopu MSDN Universal paketa, developer Ernad Husremović} on VirtualBox 4.1.16 MacOSX 
   \item Microsoft Project 2010, trial, ProductID 02252-552-2789414-37542
   \item LibreOffice 3.5.4 ?
-  \item Inkscape ?
+  \item Inkscape 0.4.8, Mac OSX X11
 \end{enumerate}
 
 \begin{itemize}
@@ -239,9 +231,5 @@ Softver korišten za realizaciju ovog dokumenta:
 \chapter{Bilješke}
 \label{chap:biljeske}
 
-\begin{enumerate}
-  \item jedan
-  \item dva: \url{http://redmine.bring.out.ba/issues/26711}
-\end{enumerate}
 
 \end{document}
