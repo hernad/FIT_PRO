@@ -106,7 +106,7 @@ Svijetli primjeri država u regionu kojima postoje jake zajednice FOSS \engl{Fre
 
 Na žalost, Bosna i Hercegovina, kao i u većini stvari, na tom planu zaostaje. 
 
-\subsection{F18 knowhowERP software}
+\subsection{"F18 knowhowERP" software}
 Pored standardnih komponentni "Ubuntu" OS-a, za ERP softver će se koristiti "F18" knowhowERP software.
 
 "F18" knowhowERP\footnote{\url{http://redmine.bring.out.ba/projects/f18}} je multiplatformsko "open source" ERP rješenje, proizvod firme "bring.out".  
@@ -183,37 +183,133 @@ Izlazi projekta: & Unapređeni informacioni sistem, unapređena organizacija pos
 \end{table}
 
 
-\label{tab:myfirsttable}
-\label{labela_oznaka}
+\chapter{Upravljanje projektom}
 
-\begin{description}
-  \item [item 1]  objasni item 1
-  \item [item 2] objasni item 2
-\end{description}
- 
+Kvalitetno upravljanje projektom zahtjeva cjelovid uvid u projekat.  
 
-Citacija \cite[str.~391]{pentaho32}.
-
+Upravljanje podrazumjeva uvid i praćenje svih bitnih aspekata projekta:
 \begin{itemize}
-   \item vako 
-   \item nako
+  \item tehnički
+  \item vremenski
+  \item angažovanje ljudskih i materijalnih resursa
+  \item finansijski
 \end{itemize}
 
-Referenca na sekciju sekcija1 (vidi \ref{sect:sekcija1}).
- 
+\section{Tehnički aspekt}
 
-\section{Zaključak}
+Pregled 
+\pagebreak
+\section{Vremenski aspekt}
 
+Dinamika realizacije projekta je utvrđena tokom preliminarnih razgovora sa klijentom. Kao okvirno vrijeme dogovoren je 1 mjesec za realizaciju uz dodatnih 2-3 mjeseca označenih kao period stabilizacije sistema. 
+
+Napravljeni dinamički plan je ispoštovao okvire tog dogovora:
+
+\begin{table}[!h]
+\centering
+\includegraphics[width=15.5cm]{img/dinamika_sheet.png}
+\caption{Tabelarni pregled projektnih zadataka}
+\end{figure}
+
+Kao nastavak tabelarnom pregledu slijedi gantogram:
+
+\begin{table}[!h]
+\centering
+\includegraphics[width=15.5cm]{img/dinamika_gant.png}
+\caption{Gantogram projekta}
+\end{figure}
+
+Vrijeme realizacije je \textbf{3 mjeseca}, period realizacije \textbf{01.06.2012 - 31.08.2012}. 
+
+\pagebreak
+\section{Resursi}
+\subsection{Materijalni resursi}
+Pregled materijalnih resursa:
+\begin{table}[h]
+\centering
+\includegraphics[width=15cm]{img/materijalni_resursi.png}
+\caption{Pregled materijalnih resursa}
+\end{figure}
+
+Treba naglasiti da se u slučaju "open source" sofvera ne radi o "klasičnim" materijanim resursima. Kod OSS-a prodaja licenci za korištenje kao troškovna stavka ne postoji. Klijent plaća instalaciju i podešenje sistema davaocu IT usluga \engl{IT vendor}.
+
+S obzirom da su cijene tih usluga normirane, te usluge je najpogodnije u projektu izraziti kao materijalne resurse.
+
+Posebna stavka je "Stabilizacija sistema, podrška". Ova stavka predstavlja iznos ugovora o podršci u periodu stabilizacije sistema koji traje cca 2-3 mjeseca.
+
+U tom periodu se očekuju intenzivne aktivnosti servisnog i programerskog tima na rješavanju zahtjeva novog korisnika.
+
+Iako bi se moglo reći da ova stavka pripada periodu eksplotacije projekta, mi smo se radi preglednosti i dogovorene dinamike plaćanja uvrstili unutar realizacije projekta.
+
+Zato je zadatku "Stabilizacija" u projektnom planu alociran samo ovaj materijalni resurs.
+
+Sveukupno, podjelu na radne i materijalne resurse treba uzeti uslovno. Ovakva podjela je napravljena radi preglednosti i kalkulacije troškova projekta.  
+
+\subsection{Ljudski resursi}
+Pregled ljudskih resursa (projektni tim) potrebnih za realizaciju projekta:
+
+\begin{table}[!h]
+\centering
+\includegraphics[width=15.5cm]{img/ljudski_resursi.png}
+\caption{Pregled ljudskih resursa}
+\end{figure}
+
+Raspored tima tokom realizacije projekta:
+
+\begin{table}[!h]
+\centering
+\includegraphics[width=15.5cm]{img/team_planner.png}
+\caption{Pregled alokacije ljudskih resursa}
+\end{figure}
+
+Radi planiranja sastanaka uvršten je predstavnik klijenta. Zbog pravilne kalkulacije troškova sa stanovišta klijenta, troškovi predstavnika su 0 KM/h.
+
+\pagebreak
+\section{Finansijski aspekt}
+\subsection{Budžet projekta}
+\begin{table}[!h]
+\centering
+\includegraphics[height=7cm]{img/troskovi.png}
+\caption{Pregled ukupnih troškova angažovanja resursa}
+\end{figure}
+
+Ukupni troškovi realizacije projekta, uključujući fazu stabilizacije su \textbf{6204,40 KM}.
+
+Navedeni su iznosi neto, bez uračnotog PDV-a.
+
+\subsection{Finansiranje projekta}
+
+Davalac usluga i klijent su dogovorili sjedeću dinamiku plaćanja:
+
+\begin{table}[h]
+\resizebox{15cm}{!} {
+\begin{tabular}{ | r | c | c | r | }
+\hline
+Pozicija & preduslov za plaćanje & Vrijeme & Iznos (KM) bez PDV \\ \hline\hline
+Avans: & - & 01.06.2012 & 2000 \\ \hline
+Instalacija: & po okončanoj instalaciji & 01.07.2012 & 2000 \\ \hline
+stabilizacija 1 & aktivna podrška klijentu & 01.08.2012 & 1000 \\ \hline 
+stabilizacija 2 & aktivna podrška klijentu & 31.08.2012 & 1204.40 \\ \hline\hline 
+                &                          &    UKUPNO: & 6204.40 \\ \hline
+\end{tabular}
+}
+\caption{Dinamika plaćanja}
+\end{table}
+
+Ova dinamika omogućava klijentu da iz sopstvenih izvora (tekućih prihoda) finansira projekat.
+
+\subsection{Ocjena opravdanosti investicije}
+
+\chapter{Zaključak}
+
+% -------------------------------------------------
 \bibliography{literatura}
 \bibliographystyle{fit}
 
+% -------------------------------------------------
 \appendix
 
-\chapter{dodatak 1}
-\label{chap:dodatak1}
-
 \chapter{Korišteni softver}
-
 Softver korišten za realizaciju ovog dokumenta:
 \begin{enumerate}
   \item Mac OS X 10.6.8
@@ -222,14 +318,16 @@ Softver korišten za realizaciju ovog dokumenta:
   \item MacTex - pdfTeX 3.1415926-2.3-1.40.12 (TeX Live 2011)
   \item Windows XP Proffesional\footnote{kupac "bring.out" u sklopu MSDN Universal paketa, developer Ernad Husremović} on VirtualBox 4.1.16 MacOSX 
   \item Microsoft Project 2010, trial, ProductID 02252-552-2789414-37542
-  \item LibreOffice 3.5.4 ?
+  \item LibreOffice 3.5.4
   \item Inkscape 0.4.8, Mac OSX X11
 \end{enumerate}
 
-\begin{itemize}
 
 \chapter{Bilješke}
 \label{chap:biljeske}
 
+\begin{itemize}
+  \item izvorni kod dokumenta, \url{https://github.com/hernad/FIT_PRO/blob/master/latex/PRO_F18.tex}
+\end{itemize}
 
 \end{document}
