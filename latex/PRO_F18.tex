@@ -41,11 +41,10 @@ Izvršena je analiza svih bitnih aspekata realizacije takvog projekta, kako tehn
 \kljucnerijeci{projekat, software otvoreng koda, OSS, multiplatformski sofver, poslovne aplikacije, F18, ERP, bring.out, informacioni sistem, IS}
 \end{sazetak}
 
-\engtitle{Project: Upgrading of an information system on an example company}
+\engtitle{Project: Improvement of the information system - Case study}
 \begin{abstract}
 
-???
-Inside this paper we are going to build project of improving a business information system (IS) in a company which currently owns an IS based on an illegal software. The IS will be based on a open source software. Besides standard OSS components, as the ERP (Enterprise resource planning) software component we will use the  "F18 knowhowERP", a programing solution of a company "bring.out" doo Sarajevo. "F18" is an OSS multiplatform software. We will explain what OSS represents for the utmost user and we will outline the advantages and risks of using such IS. We will make an analysis of all important aspects, both econoomical and technical, of relizing such a project. 
+This report presents the details of the project which aimed to improve business business information system (IS) in a company which currently owns an IS based on an illegal software. The new IS was designed as an open platform. Appart of the standard applications tis project also incorporated ERP (Enterprise resource planning) software component "F18 knowhowERP", produced by "bring.out" doo Sarajevo. "F18" is an OSS multiplatform software. This report explains what OSS represents for the user with all advantages and risks. The detailed analysis conaining all relevant aspects of the project is also presented.
 
 \keywords{project, open source software, OSS, multiplatform software, business application, F18, ERP, bring.out, information system, IS, illegal software}
 \end{abstract}
@@ -91,7 +90,7 @@ Potražnja za Linux/Ubuntu serverskim rješenjima \footnote{\url{http://linux.co
 Lista iz predhodne sekcije predstavlja djelimičnu listu aplikacija dostupnih za "Ubuntu". Međutim, i to je dovoljno da se uoči bitna razlika između "Windows"-a i "Ubuntu"-a:
 \begin{enumerate}
   \item Uz "Windows" početni paket se isporučuje samo operativni sistem, dok "Ubuntu" (kao i ostale Linux distribucije) isporučuju kompletan sistem koji korisnik može odmah početi koristiti.
-  \item Razvoj "open source" software-a je suštinski drugačiji u odnosu na razvoj zatvorenog sofvera. Kod zatvorenog software-a sve ključne razvojne aktivnosti i sudbina software-a nalaze se u rukama jednog proizvođača. Kod OSS-a postoji velika uključenost zajednice korisnika \engl{community}, što omogućava da se sve komponente software-a razvijaju u skladu sa potrebama i zahtjevima korisnika. 
+  \item Razvoj "open source" software-a je suštinski drugačiji u odnosu na razvoj zatvorenog sofvera \cite{bazaar}. Kod zatvorenog software-a sve ključne razvojne aktivnosti i sudbina software-a nalaze se u rukama jednog proizvođača. Kod OSS-a postoji velika uključenost zajednice korisnika \engl{community}, što omogućava da se sve komponente software-a razvijaju u skladu sa potrebama i zahtjevima korisnika. 
   \item U ranom stadiju razvoja OSS software je manjkao sa kvalitetnom dokumentacijom. Sada to nije slučaj. Korisnicima je na raspolaganju velika količina dokumentacije koja se takođe razvija na principima otvorenosti. Tako korisik "Ubuntu" sistema na raspolaganju ima odličnu dokumentaciju za serverske \cite{ubuntudesktop} i desktop \cite{ubuntuserver} sistem.
   \item Zahvaljujući otvorenosti, lokalizacija programa i korisničke dokumentacije (prevod i prilagodbe za lokalno tržipte) za OSS nije vođena samo komercijalnim motivima. S druge strane lokalizacija "Microsoft" proizvoda ovisi isključivo o komercijalnim faktorima. Zato je stepen lokalizacije "Microsoft" software-a na malim tržištima kakvo je naše minimalan.   
 \end{enumerate}
@@ -118,7 +117,7 @@ Korisnik je mala kompanija koja se bavi trgovinom. Sa stanovišta IT-a kompanija
 \end{itemize}
 \pagebreak
 \section{Analiza problema}
-Povod klijentu za traženje novog rješenja je nedavna akcija legalizacije.  Međutim, analiza je pokazala da glavni problemi leže u činjenici da postojeći poslovni IS ne obezbjeđuje sve potrebne podatke. Već nakon prvog sastanka sa klijentom utvrđeni su sljedeći problemi, prikazani piramidom problema (\cite{prasopro}):
+Glavni razlog zbog kojeg se klijent obratio bila je potreba da uvede legalni software. Analiza postojećeg stana urađena je uz pomoć modela piramide problema (\cite{prasopro}). Model piramide problema omogućava hijerarhijski prikaz problema od općih ka konkretnim: 
 
 \begin{figure}[H]
 \centering
@@ -127,21 +126,17 @@ Povod klijentu za traženje novog rješenja je nedavna akcija legalizacije.  Me�
 %\caption{bla bla (\cite{web:eric})}
 \end{figure}
 
-Piramida na vrhu prikazuje opće probleme da bi se idući ka dnu ti problemi konkretizirali.  
 \pagebreak
-\section{Analiza cilja}
-Analizom problema prezentovanih piramidom problema brzo dolazimo do strateškog cilja ovog projekta:
-%\patchcmd{\quote}{\rightmargin}{\leftmargin 6em \rightmargin}{}{}
-\begin{quote}
-\em Uvođenjem novog IS-a poboljšati pravovremenost i kvalitet tekućih informacija o poslovanju.} 
-\end{quote}
-Analogno ranijem grafičkom prikazu problema, putem piramide ciljeva od dna ka vrhu prezentujemo ciljeve čijom realizacijom postižemo strateški cilj:
+\section{Definisanje ciljeva projekta}
+Na osnovu analize problema definisana je piramida ciljeva projekta: 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=8cm]{img/piramida_cilja.png}
 \caption{Piramida cilja}
 \end{figure}
+
+Strateški cilj je poboljšati pravoremenost i kvalitet tekućih informacija o poslovanju kroz uvođenje novog IS-a. 
 
 \section{Logički okvir projekta}
 Na kraju analize dolazimo do ključnih odrednica projekta:
@@ -160,40 +155,64 @@ Izlazi projekta: & Unapređeni informacioni sistem, unapređena organizacija pos
 \caption{Logički okvir projekta}
 \end{table}
 
-
 \chapter{Upravljanje projektom}
-
-Kvalitetno upravljanje projektom zahtjeva cjelovid uvid u projekat.  
 
 Upravljanje podrazumjeva uvid i praćenje svih bitnih aspekata projekta:
 \begin{itemize}
   \item tehničkih
   \item vremenskih
-  \item angažovanje ljudskih i materijalnih resursa
   \item finansijskih
+  \item identifikacija rizika
+  \item planiranje ljudskih i materijalnih resursa
 \end{itemize}
 
-\pagebreak
 \section{Tehnički aspekti}
 
-U uvodnom dijelu su prezentovane tehnologije koje će se koristiti za izgradnji IS-a. Zato taj dio nećemo ponavljati ovdje.
+Komponente za realizaciju IS-a su multiplatformski i "open source" sofware:
+\begin{itemize}
+  \item Desktop OS: Ubuntu Linux 12.04 32bit
+  \item Server OS: Ubuntu Linux 12.04 64bit
+  \item Uredski software: LibreOffice 3.5
+  \item Sofware za podršku poslovanju: knowhow ERP F18
+  \item Baza podataka: PostgreSQL 9.1
+\end{itemize}
 
-Uspješno upravljanje projektom traži identifikaciju i kvantifikaciju rizika, te planiranje odgovora na pojedinačne rizike.
+Postojeći hardware klijenta je dobrih karakteristika, tako da će biti u potpunosti iskorišten.
+\pagebreak
+\section{Vremenski aspekti}
 
-\subsection{Glavni rizici projekta}
+Dinamika realizacije projekta je utvrđena tokom preliminarnih razgovora sa klijentom. Kao okvirno vrijeme dogovoren je 1 mjesec za realizaciju uz dodatnih 2-3 mjeseca označenih kao period stabilizacije sistema. 
 
+Napravljeni dinamički plan je u skladu sa ranijim dogovorom.
+
+\begin{table}[!h]
+\centering
+\includegraphics[width=15.5cm]{img/dinamika_sheet.png}
+\caption{Tabelarni pregled projektnih zadataka}
+\end{table}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=15.5cm]{img/dinamika_gant.png}
+\caption{Gantogram projekta}
+\end{figure}
+
+Vrijeme realizacije je \textbf{3 mjeseca}, period realizacije \textbf{01.06.2012 - 31.08.2012}.
+%rizici
+\section{Identifikacija rizika}
+Identifikacijom i kvantifikacijom rizika napravljena je tabela rizika:
 \begin{table}[!h]
 \centering
 \begin{tabular}{ |p{1.5cm}|p{4cm}|p{7.5cm}|p{1.5cm}| }
 \hline
 Oznaka & Rizik & Opis & Prioritet  \\ \hline\hline
-R1 & Promjena navika kod korisnika & Novi IS pretpostavlja radikalno zamjenu software-a: od desktopa do ERP rješenja & Visok \\ \hline
+R1 & Promjena navika kod korisnika & Novi IS pretpostavlja potpunu zamjenu software-a: od desktopa do ERP rješenja & Visok \\ \hline
 R2 & bring.out je jedini OSS IT vendor na bosanskom tržištu & Iako su tehnologije koje se implementiraju otvorene, na BH tržištu ne postoje drugi vendori koji nude slična rješenja & Visok \\ \hline
-R3 & Nemar države za non-Windows sisteme & Državne institucije podrazumjevaju da porezni obveznici posjeduju Windows OS & Visok \\ \hline
+R3 & Onemogućen pristup aplikacijama državnih institucija & IT rješenja državnih institucija u većini pretpostavljaju korištenje Windows OS-a & Visok \\ \hline
 R4 & Ponuđeno ERP rješenje neće zadovoljiti potrebe klijenta & Opasnost da će klijent F18 knowhow ERP percipirati kao neadekvatno ERP rješenje & Srednji \\ \hline
 R5 & Neredovno finansiranje projekta & Klijent neće moći obezbjediti redovno finansiranje projekta iz tekućih izvora & Srednji \\ \hline
 \end{tabular}
-\caption{Lista rizika}
+\caption{Lista rizika po prioritetima}
 \end{table}
 
 \subsection{Strategija odgovora na pojedinačne rizike} 
@@ -206,37 +225,16 @@ U sljedećoj tabeli dajemo prikaz preventivnih i akcija kontrole za identificira
 \hline
 Oznaka & Preventivne i kontrolne akcije  \\ \hline\hline
 R1 & Veću pažnju posvetiti obuci korisnika \\ \hline
-R2 & Otvorenim pristupom klijentu pokazati da odnose sa klijentom ne gradi na bazi monopola, nego upravo suprotnoe. Stalna komunikacija sa klijentom je najbolji način da se otkloni bojazan klijetna po ovom pitanju\\ \hline
-R3 & Aktivnim djelovanjem prema državnim institucijama obezbjediti "bring.out" treba obezbjediti da njegovi klijenti ne budu korisnici drugog reda zato što ne koriste "Windows OS"\\ \hline 
-R4 & software je alat. Koliko god on dobar bio, on sam neće uraditi posao. IT vendor se treba aktivno uključiti u probleme i potrebe korisnika, pomoći mu da organizuje poslovanje u skladu sa potrebama i glavnim ciljevima IS-a.\\ \hline
-R5 & U slučaju objektivnih problema, dogovorom prilagoditi dinamiku plaćanja. S obzirom da se u cjelini radi o sopstvenim proizvodima, IT vendor ima mogućnost učiniti ovakve ustupke klijentu. \\ \hline
+R2 & Otvorenim pristupom klijentu pokazati klijenti da se odnosi da odnosi na relaciji otvoreni IT vendor <-> klijenta grade na partnerskog osnovi, a ne na bazi monopoliziranja znanja.\\ \hline
+R3 & Aktivnim djelovanjem prema državnim institucijama obezbjediti da korisnici otvorenih sistema budu u istoj poziciji kao korisnici "Windows"-a\\ \hline 
+R4 & IT vendor se treba aktivno uključiti u probleme i potrebe korisnika, pomoći mu da organizuje poslovanje u skladu sa  glavnim ciljevima IS-a, uzevši u obzir da je softver samo alat.\\ \hline
+R5 & Zajedno sa klijentom definisati najprihvatljiviji finansijski plan za obje strane, a što je moguće upravo zahvaljujući činjenici da IT vendor nudi sopstvene proizvode i nije limitiran rokovima plaćanja prema svojim dobavljačima.\\ \hline
 \end{tabular}
-\caption{Kontrola rizika}
+\caption{Prevencija i kontrola rizika}
 \end{table}
 
-\pagebreak
-\section{Vremenski aspekti}
-
-Dinamika realizacije projekta je utvrđena tokom preliminarnih razgovora sa klijentom. Kao okvirno vrijeme dogovoren je 1 mjesec za realizaciju uz dodatnih 2-3 mjeseca označenih kao period stabilizacije sistema. 
-
-Napravljeni dinamički plan je ispoštovao okvire tog dogovora:
-
-\begin{table}[!h]
-\centering
-\includegraphics[width=15.5cm]{img/dinamika_sheet.png}
-\caption{Tabelarni pregled projektnih zadataka}
-\end{table}
-
-Kao nastavak tabelarnom pregledu slijedi gantogram:
-
-\begin{figure}[!h]
-\centering
-\includegraphics[width=15.5cm]{img/dinamika_gant.png}
-\caption{Gantogram projekta}
-\end{figure}
-
-Vrijeme realizacije je \textbf{3 mjeseca}, period realizacije \textbf{01.06.2012 - 31.08.2012}. 
-\section{Resursi}
+%resursi
+\section{Planiranje resursa}
 \subsection{Materijalni resursi}
 Pregled materijalnih resursa:
 \begin{table}[h]
@@ -281,7 +279,7 @@ Radi planiranja sastanaka uvršten je predstavnik klijenta. Zbog pravilne kalkul
 
 Ukupni troškovi realizacije projekta, uključujući fazu stabilizacije su \textbf{6204,40 KM}.
 
-Navedeni su iznosi neto, bez uračnotog PDV-a.
+Navedeni su iznosi neto, bez uračunatog PDV-a.
 
 \subsection{Finansiranje projekta}
 
@@ -307,8 +305,8 @@ Ova dinamika omogućava klijentu da iz sopstvenih izvora (tekućih operativnih p
 
 \subsection{Ocjena opravdanosti investicije}
 
-Analizu opravdanosti investicije baziraćemo na bazi alternativnog rješenja u kome korisnik jedino plaća troškove legalizacije postojećeg sistemskog sofvera.
-Znači danećemo u kalkulaciju staviti troškove legalizacije uredskog "Microsoft office" software-a, niti nabavku novog ERP rješenja.
+Analizu opravdanosti investicije bazirana je komparaciji sa alternativnimi rješenjem problema u kome korisnik jedino plaća troškove legalizacije postojećeg sistemskog sofvera.
+Stoga u kalkulaciju nisu uzeti troškovi legalizacije uredskog "Microsoft office" software-a, niti nabavka novog ERP rješenja.
 
 Kada bi se te stavke uvrstile u kalkulaciju opravdanosti, interna stopa rentabilnosti bi bila puno veća. Međutim, čak i u ovom konzervativnom scenariju troškova, naš projekat ima visoku internu stopu rentabilnosti od \textbf{36,9\%}, što nam sljedeća kalkulacija pokazuje:
 
