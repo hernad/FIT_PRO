@@ -18,7 +18,7 @@
 
 \author{Ernad Husremović}
 \brindex{DL 2792}
-\verzija {1.0.5}
+\verzija {1.0.6}
 
 \mentor{prof.dr Murat Prašo}
 
@@ -35,16 +35,16 @@
 Ovaj rad prikazuje projekat unapređenja poslovnog informacionog sistema (IS) u kompaniji koja trenutno posjeduje IS baziran na nelegalnom softveru. 
 Novi IS je baziran na softveru otvorenog koda \engl{open source software, OSS}.
 Pored standardnih OSS aplikacija, za komponentu poslovnog rješenja korišteno je "F18 knowhowERP" programsko rješenje kompanije "bring.out" doo Sarajevo. "F18" je multiplatformski OSS softver.
-U radu su detaljno objašnjenje prednosti i nedocstaci uvođenja takvog IS-a.
+U radu su detaljno objašnjenje prednosti i nedostaci uvođenja takvog IS-a.
 Izvršena je analiza svih bitnih aspekata realizacije takvog projekta, kako tehničkih i tako i ekonomskih. 
 
-\kljucnerijeci{projekat, softver otvoreng koda, OSS, multiplatformski sofver, poslovne aplikacije, F18, ERP, bring.out, informacioni sistem, IS}
+\kljucnerijeci{projekat, softver otvorenog koda, OSS, multiplatformski sofver, poslovne aplikacije, F18, ERP, bring.out, informacioni sistem, IS}
 \end{sazetak}
 
 \engtitle{Project: Improvement of the information system - Case study}
 \begin{abstract}
 
-This report presents the details of the project which aimed to improve business business information system (IS) in a company which currently owns an IS based on an illegal software. The new IS was designed as an open platform. Appart of the standard applications tis project also incorporated ERP (Enterprise resource planning) software component "F18 knowhowERP", produced by "bring.out" doo Sarajevo. "F18" is an OSS multiplatform software. This report explains what OSS represents for the user with all advantages and risks. The detailed analysis conaining all relevant aspects of the project is also presented.
+This report presents the details of the project which aimed to improve business information system (IS) in a company which currently owns an IS based on an illegal software. The new IS was designed as an open platform. Apart of the standard applications this project also incorporated ERP (Enterprise resource planning) software component "F18 knowhowERP", produced by "bring.out" doo Sarajevo. "F18" is an OSS multiplatform software. This report explains what OSS represents for the user with all advantages and risks. The detailed analysis containing all relevant aspects of the project is also presented.
 
 \keywords{project, open source software, OSS, multiplatform software, business application, F18, ERP, bring.out, information system, IS, illegal software}
 \end{abstract}
@@ -57,7 +57,7 @@ This report presents the details of the project which aimed to improve business 
 
 Akcije državnih inspekcijskih organa na suzbijanju nelegalnog softvera (nadalje legalizacija) sa početkom 2012 godine označila je početak krupnih promjena na tržištu informatičkih \engl{information technology, nadalje IT} rješenja u Bosni i Hercegovini. 
 Većina poslovnih subjekata koja je proteklih godina koristila nelegalni softver \engl{software} našla se u nezavidnoj situaciji.
-Usljed visokih troškova legalizacije "Microsoft" sofware-a\footnote{familija "Microsoft Windows" OS-ova, uz svuda prisutni ali i redovno nelegalno instalirani "Microsoft Office" uredski paket}, pojavila se potražnja za softverom drugih proizvođača.  
+Usljed visokih troškova legalizacije "Microsoft" softvera\footnote{familija "Microsoft Windows" OS-ova, uz svuda prisutni ali i redovno nelegalno instalirani "Microsoft Office" uredski paket}, pojavila se potražnja za softverom drugih proizvođača.  
 
 \section{"Open source" softver u BiH}
 
@@ -77,7 +77,7 @@ Potražnja za Linux/Ubuntu serverskim rješenjima \footnote{\url{http://linux.co
 "Ubuntu Linux" distribucija je radi svoje jednostavnosti i kvaliteta postao iznimno popularan desktop OS. Za razliku od "Windows" operativnih sistema, "Ubuntu" desktop sistem sadrži kompletan set aplikacija za svakodnevne potrebe:
 \begin{itemize}
   \item LibreOffice uredski paket za pravljenje tekstualnih i tabelarnih dokumenata, prezentacija i crteža\footnote{U funkcionalnom smislu sličan "Microsoft office" setu aplikacija. Može obrađivati većinu "Microsoft office" dokumenata}
-  \item "Inkscape", program za vektorsku grafiku \cite{inkscape}
+  \item "Inkscape", program za vektorsku grafiku \citep{inkscape}
   \item "GIMP", program za bitmapiranu grafiku
   \item "Evince", preglednik PDF dokumenata
   \item "Firefox", "Chromium" internet pretraživači
@@ -89,12 +89,12 @@ Potražnja za Linux/Ubuntu serverskim rješenjima \footnote{\url{http://linux.co
 Lista iz prethodne sekcije predstavlja djelimičnu listu aplikacija dostupnih za "Ubuntu". Međutim, i to je dovoljno da se uoči bitna razlika između "Windows"-a i "Ubuntu"-a:
 \begin{enumerate}
   \item Uz "Windows" početni paket se isporučuje samo operativni sistem, dok "Ubuntu" (kao i ostale Linux distribucije) isporučuju kompletan sistem koji korisnik može odmah početi koristiti.
-  \item Razvoj "open source" softvera je suštinski drugačiji u odnosu na razvoj zatvorenog sofvera \cite{bazaar}. Kod zatvorenog softvera sve ključne razvojne aktivnosti i sudbina softvera nalaze se u rukama jednog proizvođača. Kod OSS-a postoji velika uključenost zajednice korisnika \engl{community}, što omogućava da se sve komponente softvera razvijaju u skladu sa potrebama i zahtjevima korisnika. 
-  \item U ranom stadiju razvoja OSS softver je manjkao sa kvalitetnom dokumentacijom. Sada to nije slučaj. Korisnicima je na raspolaganju velika količina dokumentacije koja se takođe razvija na principima otvorenosti. Tako korisik "Ubuntu" sistema na raspolaganju ima odličnu dokumentaciju za serverske \cite{ubuntudesktop} i desktop \cite{ubuntuserver} sistem.
-  \item Zahvaljujući otvorenosti, lokalizacija programa i korisničke dokumentacije (prevod i prilagodbe za lokalno tržipte) za OSS nije vođena samo komercijalnim motivima. S druge strane lokalizacija "Microsoft" proizvoda ovisi isključivo o komercijalnim faktorima. Zato je stepen lokalizacije "Microsoft" softvera na malim tržištima kakvo je naše minimalan.   
+  \item Razvoj "open source" softvera je suštinski drugačiji u odnosu na razvoj zatvorenog sofvera \citep{bazaar}. Kod zatvorenog softvera sve ključne razvojne aktivnosti i sudbina softvera nalaze se u rukama jednog proizvođača. Kod OSS-a postoji velika uključenost zajednice korisnika \engl{community}, što omogućava da se sve komponente softvera razvijaju u skladu sa potrebama i zahtjevima korisnika. 
+  \item U ranom stadiju razvoja OSS softver je manjkao sa kvalitetnom dokumentacijom. Sada to nije slučaj. Korisnicima je na raspolaganju velika količina dokumentacije koja se takođe razvija na principima otvorenosti. Tako korisnik "Ubuntu" sistema na raspolaganju ima odličnu dokumentaciju za serverske \citep{ubuntudesktop} i desktop \citep{ubuntuserver} sistem.
+  \item Zahvaljujući otvorenosti, lokalizacija programa i korisničke dokumentacije (prevod i prilagodbe za lokalno tržište) za OSS nije vođena samo komercijalnim motivima. S druge strane lokalizacija "Microsoft" proizvoda ovisi isključivo o komercijalnim faktorima. Zato je stepen lokalizacije "Microsoft" softvera na malim tržištima kakvo je naše minimalan.   
 \end{enumerate}
 
-U mnogim zemljama postoje jake zajednice korisnika koje lokalizaciju "open source" softvera vrše na bazi volonterizma. Kako se radi o projektima od velikog javnog značaja, te zajednice su često finansirane od strane države. 
+U mnogim zemljama postoje jake zajednice korisnika koje lokalizaciju "open source" softvera vrše na bazi volonterizma. Kako se radi o projektima od javnog značaja, te zajednice su najčešće finansirane od strane države. 
 Svijetli primjeri država u regionu u kojima postoje jake zajednice FOSS \engl{Free and open source software} \& OSS  korisnika su Makedonija i Slovenija.
 Na žalost, Bosna i Hercegovina, kao i u većini stvari, na tom planu zaostaje. 
 
@@ -116,13 +116,12 @@ Korisnik je mala kompanija koja se bavi trgovinom. Sa stanovišta IT-a kompanija
 \end{itemize}
 \pagebreak
 \section{Analiza problema}
-Glavni razlog zbog kojeg se klijent obratio bila je potreba da uvede legalni softver. Analiza postojećeg stana urađena je uz pomoć modela piramide problema (\cite{prasopro}). Model piramide problema omogućava hijerarhijski prikaz problema od općih ka konkretnim: 
+Glavni razlog zbog kojeg se klijent obratio bila je potreba da uvede legalni softver. Analiza postojećeg stana urađena je uz pomoć modela piramide problema \citep{prasopro}. Model piramide problema omogućava hijerarhijski prikaz problema od općih ka konkretnim: 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=10cm]{img/piramida_problema.png}
 \caption{Piramida problema}
-%\caption{bla bla (\cite{web:eric})}
 \end{figure}
 
 \pagebreak
@@ -300,14 +299,14 @@ stabilizacija 2 & aktivna podrška klijentu & 31.08.2012 & 1204.40 \\ \hline\hli
 \caption{Dinamika plaćanja}
 \end{table}
 
-Ova dinamika omogućava klijentu da iz sopstvenih izvora (tekućih operativnih prihoda poslovanja \cite{prasorep}) finansira projekat.
+Ova dinamika omogućava klijentu da iz sopstvenih izvora (tekućih operativnih prihoda poslovanja \citep{prasorep}) finansira projekat.
 
 \subsection{Ocjena opravdanosti investicije}
 
-Analizu opravdanosti investicije bazirana je komparaciji sa alternativnimi rješenjem problema u kome korisnik jedino plaća troškove legalizacije postojećeg sistemskog sofvera.
+Analiza opravdanosti investicije bazirana je komparaciji sa alternativnim rješenjem problema u kome korisnik jedino plaća troškove legalizacije postojećeg sistemskog softvera.
 Stoga u kalkulaciju nisu uzeti troškovi legalizacije uredskog "Microsoft office" softvera, niti nabavka novog ERP rješenja.
 
-Kada bi se te stavke uvrstile u kalkulaciju opravdanosti, interna stopa rentabilnosti bi bila puno veća. Međutim, čak i u ovom konzervativnom scenariju troškova, naš projekat ima visoku internu stopu rentabilnosti od \textbf{36,9\%}, što nam sljedeća kalkulacija pokazuje:
+Kada bi se te stavke uvrstile u kalkulaciju opravdanosti, interna stopa rentabilnosti bila bi puno veća. Međutim, čak i u ovom konzervativnom scenariju troškova, naš projekat ima visoku internu stopu rentabilnosti od \textbf{36,9\%}, što nam sljedeća kalkulacija pokazuje:
 
 \begin{table}[!h]
 \centering
@@ -319,9 +318,9 @@ Kada bi se te stavke uvrstile u kalkulaciju opravdanosti, interna stopa rentabil
 
 Finansijski indikatori iz prethodnog poglavlja jasno kazuju da je predloženo IT rješenje u finansijskom smislu isplativa opcija. Troškovi licenci IS-a izgrađenog sa zatvorenim softverom \engl{proprietary software} su tako veliki, da će većina bosanskih poslovnih korisnika na licence potrošiti višegodišnji IT budžet. U tom slučaju budžetom se ne mogu predvidjeti sredstva za obuku, nadogradnju i kvalitetnu podršku IT sistemu. Smatramo će takvi korisnici, korisnici sa skromnim IT budžetom, u većini slučajeva dobiti bolji IS nabavkom otvorenog sistema. To vrijedi čak i u slučajevima kada su pojedinačne komponente zatvorenog IS-a superiorne u odnosu na otvoreni sistem.
 
-Poslovni IT sistemi su složeni i dinamični sistemi. Ako korisnik nakon kupovine licenci ne može obezbjediti kvalitetnu obuku za osoblje i podršku, velika je vjerovatnoća da će konačnici dobiti sistem loših performansi, bez obzira što su pojedinačne komponente superiorne u odnosu na odgovarajući otvoreni sistem.
+Poslovni IT sistemi su složeni i dinamični sistemi. Ako korisnik nakon kupovine licenci ne može obezbjediti kvalitetnu obuku i podršku, velika je vjerovatnoća da će u konačnici dobiti sistem loših performansi, bez obzira što su pojedinačne komponente superiorne u odnosu na odgovarajući otvoreni sistem.
 
-Na primjer, za najveći broj bosanskih poslovnih korisinika puno je bolje investirati u obuku za rad sa "LibreOffice"-om (LO) negoli kupovati licence za "Microsoft office" (MSO). Nakon kratke obuke, prosječan korisnik će sve poslove koje je obavljao sa MSO obavljati u LO istom brzinom i sa istim kvalitetom.
+Na primjer, za najveći broj bosanskih poslovnih korisinika puno je bolje investirati u obuku za rad sa "LibreOffice"-om (LO) negoli kupovati licence za "Microsoft office" (MSO). Nakon kratke obuke, prosječan korisnik će sve poslove koje je obavljao sa MSO, obavljati u LO istom brzinom i sa istim kvalitetom.
 
 Naposljetku, korištenje otvorenih sistema korisnicima otvara nove mogućnosti kod razvoja i nadogradnje IS-a.
 Pored činjenice da je naš softver iz primjera "LibreOffice" u poređenju sa "Microsoftovim" rješenjem dovoljno dobar \engl{good enough}, on ima jednu veoma bitnu prednost: "LibreOffice" je \textbf{multiplatformski} softver. To znači da se LO može instalirati na različite platforme - različite operativnim sistema.
